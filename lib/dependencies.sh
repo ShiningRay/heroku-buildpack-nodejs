@@ -179,7 +179,7 @@ yarn_prune_devdependencies() {
     meta_set "skipped-prune" "false"
   else
     cd "$build_dir" || return
-    monitor "yarn-prune" yarn install --frozen-lockfile --ignore-engines --ignore-scripts --prefer-offline 2>&1
+    monitor "yarn-prune" yarn install --frozen-lockfile --ignore-engines --ignore-platform --ignore-scripts --prefer-offline 2>&1
     meta_set "skipped-prune" "false"
   fi
 }
